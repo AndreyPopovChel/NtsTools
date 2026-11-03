@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NtsTools", "NtsTools.csproj", "{AAD307F1-2865-4703-9713-ADA7E61AEDD9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAD307F1-2865-4703-9713-ADA7E61AEDD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAD307F1-2865-4703-9713-ADA7E61AEDD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAD307F1-2865-4703-9713-ADA7E61AEDD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAD307F1-2865-4703-9713-ADA7E61AEDD9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9FEE531-950D-4A96-A5DA-970A9C0EB17E}
+	EndGlobalSection
+EndGlobal

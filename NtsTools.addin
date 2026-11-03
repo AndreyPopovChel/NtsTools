@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>NTS Tools</Name>
+    <Assembly>NtsTools\NtsTools.dll</Assembly>
+    <AddInId>6F2D3B9C-5A41-4E8B-9C77-2B1E0D4F8A10</AddInId>
+    <FullClassName>NtsTools.App</FullClassName>
+    <VendorId>MYCO</VendorId>
+    <VendorDescription>Проверки на NetTopologySuite</VendorDescription>
+  </AddIn>
+</RevitAddIns>
+

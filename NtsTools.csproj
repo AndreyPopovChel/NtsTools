@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<LangVersion>latest</LangVersion>
+		<PlatformTarget>x64</PlatformTarget>
+
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+
+		<RevitDir>C:\Program Files\Autodesk\Revit 2026</RevitDir>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="NetTopologySuite" Version="2.6.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="RevitAPI">
+			<HintPath>$(RevitDir)\RevitAPI.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="RevitAPIUI">
+			<HintPath>$(RevitDir)\RevitAPIUI.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+	</ItemGroup>
+
+	<!-- Автоматический деплой после успешной сборки -->
+	<Target Name="Deploy" AfterTargets="Build">
+		<PropertyGroup>
+			<AddinsDir>$(AppData)\Autodesk\Revit\Addins\2026</AddinsDir>
+		</PropertyGroup>
+		<ItemGroup>
+			<BinFiles Include="$(OutDir)**\*.*" />
+		</ItemGroup>
+
+		<Copy SourceFiles="@(BinFiles)" DestinationFolder="$(AddinsDir)\NtsTools\%(RecursiveDir)" />
+		<Copy SourceFiles="NtsTools.addin" DestinationFolder="$(AddinsDir)" />
+	</Target>
+</Project>
+
